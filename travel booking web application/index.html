@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanderly - Travel Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">Wanderly<span>.</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#booking">Book Trip</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">DISCOVER THE WORLD</p>
+        <h1>Your next adventure<br>starts here.</h1>
+        <p>Explore beautiful destinations and make memories
+          that last a lifetime.</p>
+        <a href="#booking" class="btn">Explore Trips</a>
+      </div>
+    </section>
+
+    <section class="search-section" id="booking">
+      <h2>Find Your Perfect Trip</h2>
+      <form id="searchForm" class="search-form">
+        <div class="field">
+          <label for="destination">Destination</label>
+          <select id="destination" required>
+            <option value="">Choose destination</option>
+            <option value="Bali">Bali</option>
+            <option value="Santorini">Santorini</option>
+            <option value="Swiss Alps">Swiss Alps</option>
+            <option value="Kyoto">Kyoto</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="departure">Departure</label>
+          <input type="date" id="departure" required>
+        </div>
+
+        <div class="field">
+          <label for="returnDate">Return</label>
+          <input type="date" id="returnDate" required>
+        </div>
+
+        <div class="field">
+          <label for="travelers">Travelers</label>
+          <select id="travelers">
+            <option value="1">1 traveler</option>
+            <option value="2" selected>2 travelers</option>
+            <option value="3">3 travelers</option>
+            <option value="4">4 travelers</option>
+            <option value="5">5 travelers</option>
+            <option value="6">6 travelers</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn search-btn">
+          Search Trips
+        </button>
+      </form>
+      <p id="searchMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="destinations" id="destinations">
+      <div class="section-heading">
+        <p class="eyebrow">MAKE YOUR DREAMS REAL</p>
+        <h2>Popular Destinations</h2>
+        <p>Find inspiration for your next unforgettable journey.</p>
+      </div>
+
+      <div class="destination-grid">
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80"
+               alt="Tropical Bali landscape">
+          <div class="card-info">
+            <h3>Bali, Indonesia</h3>
+            <p>Beaches, temples and tropical escapes.</p>
+            <div class="card-bottom">
+              <span>From <strong>₹25,000</strong></span>
+              <button class="book-btn" data-destination="Bali">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&w=800&q=80"
+               alt="Santorini white buildings">
+          <div class="card-info">
+            <h3>Santorini, Greece</h3>
+            <p>Beautiful sunsets and blue seas.</p>
+            <div class="card-bottom">
+              <span>From <strong>₹45,000</strong></span>
+              <button class="book-btn" data-destination="Santorini">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=80"
+               alt="Snow-covered Swiss mountains">
+          <div class="card-info">
+            <h3>Swiss Alps, Switzerland</h3>
+            <p>Mountain views and alpine adventures.</p>
+            <div class="card-bottom">
+              <span>From <strong>₹55,000</strong></span>
+              <button class="book-btn" data-destination="Swiss Alps">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80"
+               alt="Traditional Kyoto street">
+          <div class="card-info">
+            <h3>Kyoto, Japan</h3>
+            <p>Ancient temples and timeless culture.</p>
+            <div class="card-bottom">
+              <span>From <strong>₹35,000</strong></span>
+              <button class="book-btn" data-destination="Kyoto">Book</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="booking-section" id="booking-details">
+      <div class="booking-panel">
+        <p class="eyebrow">PLAN YOUR JOURNEY</p>
+        <h2>Complete Your Booking</h2>
+        <p class="muted">Enter your details to create a demo reservation.</p>
+
+        <form id="bookingForm">
+          <div class="field">
+            <label for="fullName">Full name</label>
+            <input type="text" id="fullName" placeholder="Your full name"
+                   maxlength="80" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" placeholder="you@example.com"
+                   required>
+          </div>
+
+          <div class="field">
+            <label for="bookingDestination">Destination</label>
+            <select id="bookingDestination" required>
+              <option value="">Select destination</option>
+              <option value="Bali">Bali</option>
+              <option value="Santorini">Santorini</option>
+              <option value="Swiss Alps">Swiss Alps</option>
+              <option value="Kyoto">Kyoto</option>
+            </select>
+          </div>
+
+          <button class="btn full-btn" type="submit">Confirm Demo Booking</button>
+        </form>
+
+        <div id="confirmation" class="confirmation"
+             role="status" aria-live="polite" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="logo">Wanderly<span>.</span></a>
+    <p>Explore more. Worry less. Travel often.</p>
+    <p>© 2026 Wanderly Travel. Demo project.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
